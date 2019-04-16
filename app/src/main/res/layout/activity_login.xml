@@ -13,53 +13,41 @@
         android:layout_alignParentEnd="true">
 
     </View>
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:text="@string/log_in"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="320dp"/>
-
-    <Button
-        android:id="@+id/BTN_signIn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:background="@color/yellow"
-        android:text="@string/sign_in"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="50dp"
-        android:layout_alignParentBottom="true"
-        />
-
-    <TextView
-        android:id="@+id/text_forgot_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/forgot_password"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="70dp"
-        android:layout_marginStart="70dp"
-        android:textStyle="bold"
-        />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="275dp">
+
+        </View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log_in"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="100dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+
         <RelativeLayout
             android:id="@+id/RV_LOGIN"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="100dp"
-            android:layout_marginTop="80dp"
             android:background="@drawable/signup_design">
 
             <EditText
@@ -90,7 +78,7 @@
                 android:id="@+id/editText"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginBottom="14dp"
+                android:layout_marginBottom="15dp"
                 android:layout_below="@id/view5"
                 android:ems="10"
                 android:textSize="12sp"
@@ -102,7 +90,48 @@
                 android:drawableStart="@drawable/ic_lock_open_black_24dp"
                 tools:ignore="RtlHardcoded" />
 
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_below="@id/editText">
+
+            </View>
+
         </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp">
+
+        <TextView
+        android:id="@+id/text_forgot_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="50dp"
+        android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/BTN_signIn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/field_design_yellow"
+                android:paddingRight="50dp"
+                android:paddingLeft="50dp"
+                android:text="@string/log_in"
+                android:textSize="14sp"
+                android:layout_marginBottom="50dp"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
     </ScrollView>
+
 
 </RelativeLayout>

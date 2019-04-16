@@ -14,56 +14,30 @@
 
     </View>
 
-    <Button
-        android:id="@+id/BTN_signUp_registar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/yellow"
-        android:text="@string/sign_up"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
-        android:layout_marginEnd="5dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_up"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="200dp"
-        />
-
-    <TextView
-        android:id="@+id/text_qs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/already_have_account"
-        android:textSize="12sp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="70dp"
-        android:layout_marginStart="50dp"/>
-
-    <TextView
-        android:id="@+id/text_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="70dp"
-        android:layout_marginStart="175dp"
-        android:text="@string/login"
-        android:textSize="12sp"
-         />
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="225dp">
+
+        </View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="30dp" />
 
         <RelativeLayout
             android:id="@+id/RV_OR"
@@ -84,8 +58,8 @@
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/edite_text"
-                android:drawableStart="@drawable/ic_person_black_24dp"
-                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:drawableStart="@drawable/ic_new_person_black_24dp"
+                android:drawableLeft="@drawable/ic_new_person_black_24dp"
                 android:drawablePadding="15dp"
                 android:hint="@string/full_name"
                 android:inputType="textPersonName"
@@ -214,6 +188,52 @@
                 </RadioGroup>
             </LinearLayout>
         </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+        </View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/BTN_signUp_registar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/field_design_yellow"
+                android:text="@string/sign_up"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentEnd="true" />
+
+
+            <TextView
+                android:id="@+id/text_qs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/already_have_account"
+                android:textSize="12sp"
+                android:layout_marginStart="50dp"/>
+
+            <TextView
+                android:id="@+id/text_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginStart="175dp"
+                android:text="@string/login"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
     </ScrollView>
 

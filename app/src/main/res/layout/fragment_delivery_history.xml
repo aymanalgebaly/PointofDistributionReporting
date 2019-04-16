@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.delivery.DeliveryHistoryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/edite_text_curv"
+        android:drawableStart="@drawable/ic_search_black_24dp"
+        android:drawablePadding="10dp"
+        android:hint="@string/search"
+        android:layout_margin="40dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RCV_DEL_History"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.delivery.DeliveryNewFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:background="@color/green"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="RtlHardcoded" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_delivery"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_add_circle_green_24dp"
+                android:drawableStart="@drawable/ic_add_circle_green_24dp"
+                android:layout_marginStart="10dp"
+                tools:ignore="RtlHardcoded" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/Delivery_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/ic_launcher"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/txt_Del_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_name"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/Del_name"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/edite_text_curv"
+                android:paddingStart="6dp" />
+
+            <TextView
+                android:id="@+id/txt_Del_Car_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_type"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/Del_Car_Type"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/edite_text_curv"
+                android:paddingStart="6dp" />
+
+            <TextView
+                android:id="@+id/txt_Del_Delivery_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delivery_time"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <Spinner
+                android:id="@+id/Del_Delivery_time"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/edite_text_curv"
+                android:paddingStart="6dp" />
+
+            <TextView
+                android:id="@+id/txt_Del_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/Del_Weight"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/edite_text_curv"
+                android:paddingStart="6dp" />
+
+
+
+            <TextView
+                android:id="@+id/txt_Del_item_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_size"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/Del_ItemSize"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/edite_text_curv"
+                android:paddingStart="6dp" />
+
+            <TextView
+                android:id="@+id/Del_txt_from_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/from_location"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <Spinner
+                android:id="@+id/Del_FromLocation"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/edite_text_curv"
+                android:paddingStart="6dp" />
+
+            <TextView
+                android:id="@+id/Del_txt_to_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_location"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <Spinner
+                android:id="@+id/Del_ToLocation"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/edite_text_curv"
+                android:paddingStart="6dp" />
+
+            <Button
+                android:id="@+id/BTN_Del_SUBMIT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:background="@drawable/field_design_green"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="3dp"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

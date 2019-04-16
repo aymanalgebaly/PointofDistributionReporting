@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.bottomNavigationView.HelpFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/full_name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edite_text_edit_profile"
+                android:drawableStart="@drawable/ic_new_person_black_24dp"
+                android:drawableLeft="@drawable/ic_new_person_black_24dp"
+                android:drawablePadding="15dp"
+                android:hint="@string/full_name"
+                android:inputType="textPersonName"
+                android:textSize="12sp"
+                tools:ignore="RtlHardcoded" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_below="@id/full_name">
+
+            </View>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_below="@id/view1"
+                android:drawableLeft="@drawable/ic_email_black_24dp"
+                android:hint="@string/enter_your_email"
+                android:drawablePadding="15dp"
+                android:textSize="12sp"
+                android:layout_marginLeft="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edite_text_edit_profile"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@drawable/ic_email_black_24dp"
+                android:layout_marginStart="3dp"
+                tools:ignore="RtlHardcoded" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_below="@id/email">
+
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view2"
+                android:text="@string/message"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray"
+                android:id="@+id/txt_Message"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_below="@id/txt_Message"
+                android:background="@drawable/edite_text_strok"
+                android:layout_marginTop="5dp"
+                android:id="@+id/Edit_Message"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/submit"
+                android:id="@+id/BTN_SUBMIT_HELP"
+                android:background="@drawable/field_design_yellow"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:textColor="@color/white"
+                android:layout_below="@id/Edit_Message"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

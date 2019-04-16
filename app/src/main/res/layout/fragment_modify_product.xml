@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.product.ModifyProductFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:background="@color/yellow"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="RtlHardcoded" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modify_products"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/ic_add_circle_yellow_24dp"
+                android:drawableStart="@drawable/ic_add_circle_yellow_24dp"
+                android:layout_marginStart="10dp"
+                tools:ignore="RtlHardcoded" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/Product_Modify_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/ic_launcher"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/txt_Prod_modify_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_name"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/Prod_Modify_Name"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/edite_text_curv"
+                android:paddingStart="6dp" />
+
+            <TextView
+                android:id="@+id/txt_prod_modify_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_type"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/Prod_Modify_Type"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/edite_text_curv"
+                android:paddingStart="6dp" />
+
+            <TextView
+                android:id="@+id/txt_prod_modify_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_quantity"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/Prod_Modify_Quantity"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/edite_text_curv"
+                android:paddingStart="6dp" />
+
+            <TextView
+                android:id="@+id/txt_prod_modify_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/Prod_Modify_Weight"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/edite_text_curv"
+                android:paddingStart="6dp" />
+
+
+
+            <TextView
+                android:id="@+id/txt_prod_modify_item_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_size"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/Prod_Modify_ItemSize"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/edite_text_curv"
+                android:paddingStart="6dp" />
+
+            <TextView
+                android:id="@+id/prod_modify_txt_num_dist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/number_of_distributors"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/Prod_Modify_NumOfDistrib"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:background="@drawable/edite_text_curv"
+                android:paddingStart="6dp" />
+
+            <Button
+                android:id="@+id/Prod_BTN_SAVE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:background="@color/yellow"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="3dp"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
