@@ -17,7 +17,7 @@
             tools:ignore="RtlHardcoded">
 
             <EditText
-                android:id="@+id/full_name"
+                android:id="@+id/full_name_edit_profile"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginStart="3dp"
@@ -33,17 +33,17 @@
                 tools:ignore="RtlHardcoded" />
 
             <View
-                android:id="@+id/view1"
+                android:id="@+id/view10"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/gray"
-                android:layout_below="@id/full_name">
+                android:layout_below="@id/full_name_edit_profile">
 
             </View>
 
             <EditText
-                android:id="@+id/email"
-                android:layout_below="@id/view1"
+                android:id="@+id/email_edit_profile"
+                android:layout_below="@id/view10"
                 android:drawableLeft="@drawable/ic_email_black_24dp"
                 android:hint="@string/enter_your_email"
                 android:drawablePadding="15dp"
@@ -59,21 +59,21 @@
                 tools:ignore="RtlHardcoded" />
 
             <View
-                android:id="@+id/view2"
+                android:id="@+id/view20"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/gray"
-                android:layout_below="@id/email">
+                android:layout_below="@id/email_edit_profile">
 
             </View>
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/password_edit_profile"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:ems="10"
                 android:layout_marginLeft="3dp"
-                android:layout_below="@id/view2"
+                android:layout_below="@id/view20"
                 android:drawableLeft="@drawable/ic_lock_open_black_24dp"
                 android:hint="............"
                 android:drawablePadding="15dp"
@@ -85,19 +85,19 @@
                 tools:ignore="RtlHardcoded" />
 
             <View
-                android:id="@+id/view3"
+                android:id="@+id/view30"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/gray"
-                android:layout_below="@id/password">
+                android:layout_below="@id/password_edit_profile">
 
             </View>
 
             <EditText
-                android:id="@+id/phone_num"
+                android:id="@+id/phone_num_edit_profile"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_below="@id/view3"
+                android:layout_below="@id/view30"
                 android:drawableLeft="@drawable/ic_phone_android_black_24dp"
                 android:hint="@string/mobile_number"
                 android:textSize="12sp"
@@ -111,27 +111,28 @@
                 tools:ignore="RtlHardcoded" />
 
             <View
-                android:id="@+id/view4"
+                android:id="@+id/view40"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/gray"
-                android:layout_below="@id/phone_num">
+                android:layout_below="@id/phone_num_edit_profile">
 
             </View>
 
             <LinearLayout
-                android:id="@+id/LIN_Radio"
+                android:id="@+id/LIN_Radio_edit_profile"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:layout_below="@id/view4">
+                android:layout_below="@id/view40">
 
                 <RadioGroup
-                    android:id="@+id/lin_one"
+                    android:id="@+id/lin_one_edite_profile"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <RadioButton
+                        android:id="@+id/radio_btn_one_edite_profile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/agent"
@@ -143,6 +144,7 @@
                         tools:ignore="RtlHardcoded" />
 
                     <RadioButton
+                        android:id="@+id/radio_btn_two_edite_profile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/dark_gray"
@@ -161,9 +163,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:orientation="vertical"
-                android:layout_below="@id/LIN_Radio">
+                android:layout_below="@id/LIN_Radio_edit_profile">
 
                 <Button
+                    android:id="@+id/btn_save_edite_profile"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:background="@drawable/field_design_yellow"

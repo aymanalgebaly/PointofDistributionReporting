@@ -89,4 +89,6 @@
     <string name="search">Search</string>
     <string name="message">Message</string>
     <string name="product">Product</string>
+    <string name="your_changes_has_been_saved">Your changes has been saved</string>
+    <string name="ok">OK</string>
 </resources>
