@@ -91,4 +91,9 @@
     <string name="product">Product</string>
     <string name="your_changes_has_been_saved">Your changes has been saved</string>
     <string name="ok">OK</string>
+    <string name="your_order_has_been_placed">Your order has been placed</string>
+    <string name="thank_you">Thank You</string>
+    <string name="we_will_contact_you_soon">We will contact you soon</string>
+    <string name="point_of_distribution">POINT OF DISTRIBUTION</string>
+    <string name="reporting_application">REPORTING APPLICATION</string>
 </resources>

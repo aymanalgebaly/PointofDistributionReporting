@@ -1,4 +1,4 @@
-package com.compubase.podra;
+package com.compubase.podra.ui.activities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.compubase.podra.R;
 import com.compubase.podra.ui.fragments.HomeFragment;
 import com.compubase.podra.ui.fragments.bottomNavigationView.EditProfileFragment;
 import com.compubase.podra.ui.fragments.bottomNavigationView.HelpFragment;

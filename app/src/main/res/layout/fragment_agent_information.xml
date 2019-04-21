@@ -19,7 +19,7 @@
         android:textStyle="bold"
         android:textSize="16sp"
         android:textColor="@color/black"
-        android:drawableStart="@drawable/ic_add_circle_blue_24dp"
+        android:drawableStart="@drawable/tab_circle_blue"
         android:layout_marginTop="10dp"
         android:layout_marginStart="5dp"/>
 
@@ -121,6 +121,13 @@
             android:id="@+id/frg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
+
+        <!--<com.google.android.gms.maps.MapView-->
+            <!--android:id="@+id/mapview"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent" />-->
+
+
     </FrameLayout>
 
     </LinearLayout>

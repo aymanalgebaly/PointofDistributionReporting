@@ -2,11 +2,11 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:state_selected="true"
-        android:drawable="@drawable/ic_add_circle_blue_24dp">
+        android:drawable="@drawable/tab_circle_blue">
 
     </item>
     <item android:state_selected="false"
-        android:drawable="@drawable/ic_add_circle_yellow_24dp">
+        android:drawable="@drawable/tab_circle_yellow">
 
     </item>
 

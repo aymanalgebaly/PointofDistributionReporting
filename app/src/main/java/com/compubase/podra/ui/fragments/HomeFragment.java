@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.compubase.podra.HomeActivity;
+import com.compubase.podra.ui.activities.HomeActivity;
 import com.compubase.podra.R;
 import com.compubase.podra.ui.fragments.POD.PodFragment;
 import com.compubase.podra.ui.fragments.delivery.DeliveryFragment;

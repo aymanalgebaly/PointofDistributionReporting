@@ -1,6 +1,7 @@
 package com.compubase.podra.ui.fragments.delivery;
 
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -86,7 +87,25 @@ public class DeliveryNewFragment extends Fragment {
             case R.id.Delivery_img:
                 break;
             case R.id.BTN_Del_SUBMIT:
+                DialogNewDelivery();
                 break;
         }
+    }
+
+    private void DialogNewDelivery() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        View mView = getLayoutInflater().inflate(R.layout.custom_dialog_new_delivery,null);
+
+        builder.setView(mView);
+        final AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+        Button button = mView.findViewById(R.id.BTN_dialog_new_delivery);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.hide();
+            }
+        });
     }
 }

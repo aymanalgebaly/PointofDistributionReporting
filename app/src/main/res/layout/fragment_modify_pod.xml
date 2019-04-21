@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -34,22 +34,22 @@
                 android:drawablePadding="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
-                android:drawableLeft="@drawable/ic_add_circle_pink_24dp"
-                android:drawableStart="@drawable/ic_add_circle_pink_24dp"
+                android:drawableLeft="@drawable/circle_tab_pink"
+                android:drawableStart="@drawable/circle_tab_pink"
                 android:layout_marginStart="10dp"
                 tools:ignore="RtlHardcoded" />
 
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="100dp"
-                android:id="@+id/img_modify"
+                android:id="@+id/img_Modify_POD"
                 android:layout_height="100dp"
                 android:background="@mipmap/ic_launcher"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"/>
 
             <TextView
-                android:id="@+id/txt_publication"
+                android:id="@+id/txt_Modify_POD_publication"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/publication_type"
@@ -62,7 +62,7 @@
                 tools:ignore="RtlHardcoded" />
 
             <EditText
-                android:id="@+id/Puplication_modify"
+                android:id="@+id/Puplication_Modify_POD"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginTop="5dp"
@@ -75,7 +75,7 @@
                 android:paddingStart="6dp" />
 
             <TextView
-                android:id="@+id/txt_weight"
+                android:id="@+id/txt_Modify_POD_weight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/weight"
@@ -87,7 +87,7 @@
                 tools:ignore="RtlHardcoded" />
 
             <EditText
-                android:id="@+id/Weight_modify"
+                android:id="@+id/Weight_Modify_POD"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginTop="5dp"
@@ -100,7 +100,7 @@
                 android:paddingStart="6dp" />
 
             <TextView
-                android:id="@+id/txt_quantity"
+                android:id="@+id/txt_Modify_POD_quantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/quantity"
@@ -112,7 +112,7 @@
                 tools:ignore="RtlHardcoded" />
 
             <EditText
-                android:id="@+id/Quantity_modify"
+                android:id="@+id/Quantity_Modify_POD"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginTop="5dp"
@@ -125,7 +125,7 @@
                 android:paddingStart="6dp" />
 
             <TextView
-                android:id="@+id/txt_city"
+                android:id="@+id/txt_Modify_POD_city"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/city"
@@ -137,7 +137,7 @@
                 tools:ignore="RtlHardcoded" />
 
             <EditText
-                android:id="@+id/City_modify"
+                android:id="@+id/City_Modify_POD"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginTop="5dp"
@@ -150,7 +150,7 @@
                 android:paddingStart="6dp" />
 
             <TextView
-                android:id="@+id/txt_startDate"
+                android:id="@+id/txt_Modify_POD_startDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/start_date"
@@ -162,7 +162,7 @@
                 tools:ignore="RtlHardcoded" />
 
             <TextView
-                android:id="@+id/StartDate_Calendar"
+                android:id="@+id/StartDate_Calendar_Modify_POD"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginTop="5dp"
@@ -175,7 +175,7 @@
                 android:paddingStart="6dp" />
 
             <TextView
-                android:id="@+id/txt_endDate"
+                android:id="@+id/txt_Modify_POD_endDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/end_date"
@@ -187,7 +187,7 @@
                 tools:ignore="RtlHardcoded" />
 
             <TextView
-                android:id="@+id/EndDate_Calendar"
+                android:id="@+id/EndDate_Calendar_Modify_POD"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginTop="5dp"
@@ -200,7 +200,7 @@
                 android:paddingStart="6dp" />
 
             <TextView
-                android:id="@+id/txt_itemSize"
+                android:id="@+id/txt_Modify_POD_itemSize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/item_size"
@@ -212,7 +212,7 @@
                 tools:ignore="RtlHardcoded" />
 
             <EditText
-                android:id="@+id/itemSize_Modify"
+                android:id="@+id/itemSize_Modify_POD"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginTop="5dp"
@@ -225,14 +225,16 @@
                 android:paddingStart="6dp" />
 
             <Button
-                android:id="@+id/BTN_SAVE"
+                android:id="@+id/BTN_Modify_POD_SAVE"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/save"
                 android:textColor="@color/white"
                 android:background="@drawable/field_design_new_button"
                 android:layout_marginBottom="10dp"
-                android:layout_gravity="end"
+                android:layout_gravity="center_horizontal"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
                 android:layout_marginRight="3dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="3dp"
@@ -240,4 +242,4 @@
 
         </LinearLayout>
     </ScrollView>
-</FrameLayout>
+</RelativeLayout>

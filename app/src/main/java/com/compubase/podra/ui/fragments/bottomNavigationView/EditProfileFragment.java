@@ -15,6 +15,7 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 
 import com.compubase.podra.R;
+import com.compubase.podra.ui.fragments.delivery.ModifyDeliveryFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -56,6 +57,7 @@ public class EditProfileFragment extends Fragment {
     @BindView(R.id.RV_OR)
     RelativeLayout RVOR;
     Unbinder unbinder;
+    private AlertDialog alertDialog;
 
     public EditProfileFragment() {
         // Required empty public constructor
@@ -69,6 +71,7 @@ public class EditProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_edit_profile, container, false);
 
         unbinder = ButterKnife.bind(this, view);
+
         return view;
     }
 
@@ -84,14 +87,22 @@ public class EditProfileFragment extends Fragment {
         Dialog();
     }
 
-    private void Dialog() {
+    public void Dialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         View mView = getLayoutInflater().inflate(R.layout.custom_dialog_edite_profile,null);
-        Button button = mView.findViewById(R.id.BTN_edit_profile);
 
         builder.setView(mView);
-        AlertDialog alertDialog = builder.create();
+        alertDialog = builder.create();
         alertDialog.show();
+
+        Button button = mView.findViewById(R.id.BTN_edit_profile);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.hide();
+            }
+        });
+
     }
 
 

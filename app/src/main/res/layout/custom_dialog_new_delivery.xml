@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:alpha="0.8"
+    android:background="@color/yellow"
+    android:layout_height="150dp">
+
+    <TextView
+        android:id="@+id/txt_edit_new_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/your_order_has_been_placed"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/BTN_dialog_new_delivery"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="@drawable/field_design_black"
+        android:text="@string/ok"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+</LinearLayout>
