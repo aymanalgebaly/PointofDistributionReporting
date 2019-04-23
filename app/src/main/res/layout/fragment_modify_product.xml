@@ -35,8 +35,8 @@
                 android:drawablePadding="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
-                android:drawableLeft="@drawable/ic_add_circle_yellow_24dp"
-                android:drawableStart="@drawable/ic_add_circle_yellow_24dp"
+                android:drawableLeft="@drawable/tab_circle_yellow"
+                android:drawableStart="@drawable/tab_circle_yellow"
                 android:layout_marginStart="10dp"
                 tools:ignore="RtlHardcoded" />
 

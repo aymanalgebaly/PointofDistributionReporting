@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.POD.ViewPodFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/RV_ViewPod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_order"
+        android:textColor="@color/pink"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:drawableLeft="@drawable/circle_tab_pink"
+        android:drawableStart="@drawable/circle_tab_pink"
+        android:layout_marginStart="10dp"
+        tools:ignore="RtlHardcoded" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        android:id="@+id/card_view_pod_view"
+        android:layout_marginTop="40dp">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/RV_ViewPod">
+
+        <TextView
+            android:id="@+id/txt_num_pod_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/no"
+            android:textStyle="bold"
+            android:textColor="@color/pink"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/num_pod_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/txt_num_pod_view"
+            app:layout_constraintTop_toTopOf="@+id/txt_num_pod_view" />
+
+        <TextView
+            android:id="@+id/txt_product_name_pod_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/product_name"
+            android:textColor="@color/pink"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_num_pod_view" />
+
+        <TextView
+            android:id="@+id/product_name_pod_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/txt_product_name_pod_view"
+            app:layout_constraintTop_toTopOf="@+id/txt_product_name_pod_view" />
+
+        <TextView
+            android:id="@+id/txt_status_pod_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/status"
+            android:textSize="16sp"
+            android:textColor="@color/pink"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_product_name_pod_view" />
+
+        <TextView
+            android:id="@+id/status_active_pod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/txt_status_pod_view"
+            app:layout_constraintTop_toTopOf="@+id/txt_status_pod_view" />
+
+        <TextView
+            android:id="@+id/txt_distributor_name_pod_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/distributer_name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/pink"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_status_pod_view" />
+
+        <TextView
+            android:id="@+id/distributor_name_pod_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/txt_distributor_name_pod_view"
+            app:layout_constraintTop_toTopOf="@+id/txt_distributor_name_pod_view" />
+
+        <TextView
+            android:id="@+id/txt_distributed_pod_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/distributed"
+            android:textSize="16sp"
+            android:textColor="@color/pink"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_distributor_name_pod_view" />
+
+        <TextView
+            android:id="@+id/distributed_pod_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/txt_distributed_pod_view"
+            app:layout_constraintTop_toTopOf="@+id/txt_distributed_pod_view" />
+
+        <TextView
+            android:id="@+id/txt_finishing_dist_pod_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/finishing_distributing"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/pink"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_distributed_pod_view" />
+
+        <TextView
+            android:id="@+id/finishing_dist_pod_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/txt_finishing_dist_pod_view"
+            app:layout_constraintTop_toTopOf="@+id/txt_finishing_dist_pod_view" />
+
+    </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RV_View_pod_BTN"
+        android:layout_below="@id/card_view_pod_view">
+
+        <Button
+            android:id="@+id/BTN_Last_visits_pod_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/field_design_new_button"
+            android:layout_marginTop="30dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="@string/last_visits"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/RV_View_pod_BTN"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="60dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/frame_map_pod_view"
+            android:layout_height="match_parent">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/pod_view_map">
+
+        </fragment>
+
+        </FrameLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

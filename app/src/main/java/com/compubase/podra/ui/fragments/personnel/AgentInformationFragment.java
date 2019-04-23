@@ -38,11 +38,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AgentInformationFragment extends Fragment{
+public class AgentInformationFragment extends Fragment implements OnMapReadyCallback{
 
     MapView mapView;
     GoogleMap mgoogleMap;
     private View view;
+    private SupportMapFragment supportMapFragment;
 
 
     public AgentInformationFragment() {
@@ -56,48 +57,40 @@ public class AgentInformationFragment extends Fragment{
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_agent_information, container, false);
 
-        SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.frg);
-        supportMapFragment.getMapAsync(new OnMapReadyCallback() {
-            @Override
-            public void onMapReady(GoogleMap googleMap) {
-                mgoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        supportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.frg);
+        if (supportMapFragment == null){
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            supportMapFragment = SupportMapFragment.newInstance();
+            ft.replace(R.id.frg,supportMapFragment).commit();
 
-                mgoogleMap.clear(); //clear old markers
-
-                CameraPosition googlePlex = CameraPosition.builder()
-                        .target(new LatLng(37.4219999,-122.0862462))
-                        .zoom(10)
-                        .bearing(0)
-                        .tilt(45)
-                        .build();
-
-                mgoogleMap.animateCamera(CameraUpdateFactory.newCameraPosition(googlePlex), 10000, null);
-
-                mgoogleMap.addMarker(new MarkerOptions()
-                        .position(new LatLng(37.4219999, -122.0862462))
-                        .title("Spider Man")
-                        .icon(bitmapDescriptorFromVector(getActivity(),R.drawable.ic_location_on_black_24dp)));
-
-                mgoogleMap.addMarker(new MarkerOptions()
-                        .position(new LatLng(37.4629101,-122.2449094))
-                        .title("Iron Man")
-                        .snippet("His Talent : Plenty of money"));
-
-                mgoogleMap.addMarker(new MarkerOptions()
-                        .position(new LatLng(37.3092293,-122.1136845))
-                        .title("Captain America"));
-
-            }
-        });
+        }
+        supportMapFragment.getMapAsync(this);
 
         return view;
     }
-    private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId) {
-        Drawable vectorDrawable = ContextCompat.getDrawable(context, vectorResId);
-        vectorDrawable.setBounds(0, 0, vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight());
-        Bitmap bitmap = Bitmap.createBitmap(vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(bitmap);
-        vectorDrawable.draw(canvas);
-        return BitmapDescriptorFactory.fromBitmap(bitmap);
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mgoogleMap = googleMap;
+    }
+
+    private void addMarker(LatLng latLng) {
+        try {
+            if (null != latLng) {
+                BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromResource(R.drawable.ic_location_on_black_24dp);
+                MarkerOptions options = new MarkerOptions();
+                options.position(latLng)
+                        .icon(bitmapDescriptor);
+
+                if (mgoogleMap != null) {
+                    mgoogleMap.addMarker(options);
+                    CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, 19f);
+                    mgoogleMap.animateCamera(cameraUpdate);
+                }
+
+            }
+        } catch (Exception e) {
+        }
     }
 }

@@ -58,7 +58,6 @@
     <string name="save">Save</string>
     <string name="modify_pod_order">Modify POD Order</string>
     <string name="new_product">New Product</string>
-    <string name="product_name">Product Name</string>
     <string name="product_type">Product Type</string>
     <string name="product_quantity">Product Quantity</string>
     <string name="number_of_distributors">Number Of Distributors</string>
@@ -96,4 +95,16 @@
     <string name="we_will_contact_you_soon">We will contact you soon</string>
     <string name="point_of_distribution">POINT OF DISTRIBUTION</string>
     <string name="reporting_application">REPORTING APPLICATION</string>
+    <string name="no">No :</string>
+    <string name="_21_05_2019">21/05/2019</string>
+    <string name="delete">Delete</string>
+    <string name="modify">Modify</string>
+    <string name="view_order">View Order</string>
+    <string name="product_name">Product Name :</string>
+    <string name="status">Status</string>
+    <string name="distributer_name">Distributer Name</string>
+    <string name="distributed">Distributed</string>
+    <string name="finishing_distributing">Finishing Distributing</string>
+    <string name="last_visits">Last Visits</string>
+    <string name="active_product">Active Product</string>
 </resources>
