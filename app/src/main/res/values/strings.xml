@@ -107,4 +107,11 @@
     <string name="finishing_distributing">Finishing Distributing</string>
     <string name="last_visits">Last Visits</string>
     <string name="active_product">Active Product</string>
+    <string name="view_delivery">View Delivery</string>
+    <string name="arriving_in">Arriving in</string>
+    <string name="current_location">Current Location</string>
+    <string name="delivery_history">Delivery History</string>
+    <string name="date">Date</string>
+    <string name="view_old_delivery">View Old Delivery</string>
+    <string name="phone_number">Phone Number</string>
 </resources>

@@ -7,6 +7,23 @@
     tools:context=".ui.fragments.delivery.DeliveryHistoryFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/txt_Delivery_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delivery_history"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:drawableLeft="@drawable/circle_tab_green"
+        android:drawableStart="@drawable/circle_tab_green"
+        android:layout_marginStart="10dp"
+        tools:ignore="RtlHardcoded" />
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="35dp"
@@ -14,7 +31,10 @@
         android:drawableStart="@drawable/ic_search_black_24dp"
         android:drawablePadding="10dp"
         android:hint="@string/search"
-        android:layout_margin="40dp"/>
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/RCV_DEL_History"

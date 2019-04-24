@@ -81,7 +81,7 @@ public class PersonnelFragment extends Fragment {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
         adapter.addFrag(new PersonnelFristFragment());
         adapter.addFrag(new ActivePersonnelFragment());
-        adapter.addFrag(new AgentInformationFragment());
+        adapter.addFrag(new HistoryPersonnelFragment());
         viewPager.setAdapter(adapter);
     }
 

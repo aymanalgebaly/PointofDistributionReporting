@@ -83,7 +83,7 @@ public class DeliveryFragment extends Fragment {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
         adapter.addFrag(new DeliveryNewFragment());
-        adapter.addFrag(new ModifyDeliveryFragment());
+        adapter.addFrag(new DeliveryActiveFragment());
         adapter.addFrag(new DeliveryHistoryFragment());
         viewPager.setAdapter(adapter);
     }
