@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.compubase.podra.R;
+import com.compubase.podra.ui.activities.HomeActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -55,6 +56,7 @@ public class ModifyProductFragment extends Fragment {
     Button ProdBTNSAVE;
     Unbinder unbinder;
 
+
     public ModifyProductFragment() {
         // Required empty public constructor
     }
@@ -65,6 +67,7 @@ public class ModifyProductFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_modify_product, container, false);
+
 
         unbinder = ButterKnife.bind(this, view);
         return view;

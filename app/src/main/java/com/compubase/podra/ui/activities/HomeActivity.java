@@ -1,5 +1,6 @@
 package com.compubase.podra.ui.activities;
 
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -11,12 +12,20 @@ import android.widget.TextView;
 
 import com.compubase.podra.R;
 import com.compubase.podra.ui.fragments.HomeFragment;
+import com.compubase.podra.ui.fragments.POD.ModifyPodFragment;
+import com.compubase.podra.ui.fragments.POD.ViewPodFragment;
 import com.compubase.podra.ui.fragments.bottomNavigationView.EditProfileFragment;
 import com.compubase.podra.ui.fragments.bottomNavigationView.HelpFragment;
+import com.compubase.podra.ui.fragments.delivery.ModifyDeliveryFragment;
+import com.compubase.podra.ui.fragments.delivery.ViewDeliveryFragment;
+import com.compubase.podra.ui.fragments.product.ModifyProductFragment;
+import com.compubase.podra.ui.fragments.product.ViewProductFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
+    public static int checkfragment = 0;
     private TextView mTextMessage;
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -39,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
                     displaySelectedFragment(helpFragment);
 //                    mTextMessage.setText(R.string.help);
                     return true;
-            }
+        }
             return false;
         }
     };
@@ -54,8 +63,28 @@ public class HomeActivity extends AppCompatActivity {
         navigation.setSelectedItemId(R.id.navigation_Home);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        HomeFragment homeFragment = new HomeFragment();
-        displaySelectedFragment(homeFragment);
+        if (checkfragment == 0){
+            HomeFragment homeFragment = new HomeFragment();
+            displaySelectedFragment(homeFragment);
+        }else if (checkfragment == 1){
+            ViewPodFragment viewPodFragment = new ViewPodFragment();
+            displaySelectedFragmentNew(viewPodFragment);
+        }else if (checkfragment == 2){
+            ModifyPodFragment modifyPodFragment = new ModifyPodFragment();
+            displaySelectedFragmentNew(modifyPodFragment);
+        }else if (checkfragment == 3){
+            ViewDeliveryFragment viewDeliveryFragment = new ViewDeliveryFragment();
+            displaySelectedFragmentNew(viewDeliveryFragment);
+        }else if (checkfragment == 4){
+            ModifyDeliveryFragment modifyDeliveryFragment = new ModifyDeliveryFragment();
+            displaySelectedFragmentNew(modifyDeliveryFragment);
+        }else if (checkfragment == 5) {
+            ViewProductFragment viewProductFragment = new ViewProductFragment();
+            displaySelectedFragmentNew(viewProductFragment);
+        }else if (checkfragment == 6) {
+            ModifyProductFragment modifyProductFragment = new ModifyProductFragment();
+            displaySelectedFragmentNew(modifyProductFragment);
+        }
     }
 
     public void displaySelectedFragment(Fragment fragment) {
@@ -63,4 +92,10 @@ public class HomeActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.addToBackStack(null).commit();
     }
+    public void displaySelectedFragmentNew(Fragment fragment) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frame, fragment);
+        fragmentTransaction.commit();
+    }
+
 }

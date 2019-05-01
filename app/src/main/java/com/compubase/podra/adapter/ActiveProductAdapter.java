@@ -1,6 +1,7 @@
 package com.compubase.podra.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.compubase.podra.R;
 import com.compubase.podra.data.model.ActiveProductModel;
+import com.compubase.podra.ui.activities.HomeActivity;
 
 import java.util.List;
 
@@ -40,6 +42,21 @@ public class ActiveProductAdapter extends RecyclerView.Adapter<ActiveProductAdap
         viewHolderActiveProduct.num.setText(activeProductModel.getNum());
         viewHolderActiveProduct.product_name.setText(activeProductModel.getProduct_name());
         viewHolderActiveProduct.quantity.setText(activeProductModel.getQuantity());
+
+        viewHolderActiveProduct.btn_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context,HomeActivity.class));
+                HomeActivity.checkfragment = 5;
+            }
+        });
+        viewHolderActiveProduct.btn_modify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context,HomeActivity.class));
+                HomeActivity.checkfragment = 6;
+            }
+        });
     }
 
     @Override

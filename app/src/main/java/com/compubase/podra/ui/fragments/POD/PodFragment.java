@@ -79,10 +79,13 @@ public class PodFragment extends Fragment {
     }
 
     private void setupViewPager(ViewPager viewPager) {
+
         ViewPagerAdapter adapter = new ViewPagerAdapter(getFragmentManager());
+
         adapter.addFrag(new NewFragment());
         adapter.addFrag(new ActiveFragment());
         adapter.addFrag(new HistoryFragment());
+
         viewPager.setAdapter(adapter);
     }
     class ViewPagerAdapter extends FragmentStatePagerAdapter {

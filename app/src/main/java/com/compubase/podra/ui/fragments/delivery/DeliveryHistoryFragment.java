@@ -14,8 +14,12 @@ import com.compubase.podra.R;
 import com.compubase.podra.adapter.ActiveProductAdapter;
 import com.compubase.podra.adapter.DeliveryActiveAdapter;
 import com.compubase.podra.adapter.DeliveryHistoryAdapter;
+import com.compubase.podra.adapter.ProductHistoryAdapter;
 import com.compubase.podra.data.model.ActiveProductModel;
 import com.compubase.podra.data.model.DeliveryHistoryModel;
+import com.compubase.podra.data.model.ProductHistoryModel;
+import com.compubase.podra.ui.activities.HomeActivity;
+import com.compubase.podra.ui.fragments.product.ViewProductFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +57,7 @@ public class DeliveryHistoryFragment extends Fragment {
 
         setupRecycler();
         fetchData();
+        onTouchAdapter();
 
         unbinder = ButterKnife.bind(this, view);
         return view;
@@ -77,6 +82,17 @@ public class DeliveryHistoryFragment extends Fragment {
         }
         adapter.setData(deliveryHistoryModels);
         adapter.notifyDataSetChanged();
+    }
+    private void onTouchAdapter() {
+        adapter.onItemClickedListner(new DeliveryHistoryAdapter.onItemClickListner() {
+            @Override
+            public void onClick(DeliveryHistoryModel deliveryHistoryModel) {
+                HomeActivity homeActivity = (HomeActivity)getActivity();
+                ViewDeliveryFragment viewDeliveryFragment = new ViewDeliveryFragment();
+                homeActivity.displaySelectedFragment(viewDeliveryFragment);
+
+            }
+        });
     }
 
     @Override

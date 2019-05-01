@@ -31,15 +31,15 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/user_img_info_personnel"
             android:layout_width="0dp"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:layout_height="50dp"
-            android:background="@drawable/ic_add_circle_blue_24dp"/>
+            android:background="@mipmap/download"/>
 
         <TextView
             android:id="@+id/user_name_info_personnel"
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_weight="8"
+            android:layout_weight="9"
             android:hint="@string/user_name"
             android:paddingTop="10dp"
             android:layout_gravity="center_vertical"

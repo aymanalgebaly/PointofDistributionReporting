@@ -3,6 +3,7 @@ package com.compubase.podra.ui.fragments.personnel;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import com.compubase.podra.adapter.DeliveryActiveAdapter;
 import com.compubase.podra.adapter.FirstPersonnelAdapter;
 import com.compubase.podra.data.model.DeliveryActiveModel;
 import com.compubase.podra.data.model.FristPersonnelModel;
+import com.compubase.podra.ui.activities.HomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +51,7 @@ public class PersonnelFristFragment extends Fragment {
 
         setupRecycler();
         fetchData();
+        onTouchAdapter();
         unbinder = ButterKnife.bind(this, view);
         return view;
     }
@@ -79,5 +82,16 @@ public class PersonnelFristFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+    }
+    private void onTouchAdapter(){
+        adapter.onItemClickedListner(new FirstPersonnelAdapter.onItemClickListner() {
+            @Override
+            public void onClick(FristPersonnelModel fristPersonnelModel) {
+
+                HomeActivity homeActivity = (HomeActivity)getActivity();
+                InfoPersonnelFragment infoPersonnelFragment = new InfoPersonnelFragment();
+                homeActivity.displaySelectedFragment(infoPersonnelFragment);
+            }
+        });
     }
 }

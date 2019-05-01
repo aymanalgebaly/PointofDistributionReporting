@@ -195,7 +195,7 @@
     <Button
         android:id="@+id/BTN_Current_Location"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@id/cardView_view_delivery"
         android:layout_marginTop="80dp"
         android:layout_marginLeft="100dp"
@@ -209,7 +209,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="70dp"
+        android:layout_margin="30dp"
         android:layout_below="@id/BTN_Current_Location">
 
         <fragment

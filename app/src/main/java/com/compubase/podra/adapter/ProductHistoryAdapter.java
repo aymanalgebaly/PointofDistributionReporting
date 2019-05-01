@@ -6,9 +6,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.compubase.podra.R;
+import com.compubase.podra.data.model.FristPersonnelModel;
 import com.compubase.podra.data.model.ProductHistoryModel;
 
 import java.util.List;
@@ -17,6 +19,16 @@ public class ProductHistoryAdapter extends RecyclerView.Adapter<ProductHistoryAd
 
     private Context context;
     private List<ProductHistoryModel> productHistoryModelList;
+    private ProductHistoryAdapter.onItemClickListner onItemClickedListner;
+
+
+    public interface onItemClickListner {
+        void onClick(ProductHistoryModel productHistoryModel);//pass your object types.
+    }
+
+    public void onItemClickedListner(ProductHistoryAdapter.onItemClickListner onItemClickListner) {
+        this.onItemClickedListner = onItemClickListner;
+    }
 
     public ProductHistoryAdapter(Context context) {
         this.context = context;
@@ -31,13 +43,21 @@ public class ProductHistoryAdapter extends RecyclerView.Adapter<ProductHistoryAd
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolderProductHistory viewHolderProductHistory, int i) {
+    public void onBindViewHolder(@NonNull ViewHolderProductHistory viewHolderProductHistory, final int i) {
 
         ProductHistoryModel productHistoryModel = productHistoryModelList.get(i);
         viewHolderProductHistory.num.setText(productHistoryModel.getNum());
         viewHolderProductHistory.name.setText(productHistoryModel.getName());
         viewHolderProductHistory.start.setText(productHistoryModel.getStart());
         viewHolderProductHistory.end.setText(productHistoryModel.getEnd());
+
+        viewHolderProductHistory.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ProductHistoryModel productHistoryModel1 = productHistoryModelList.get(i);
+                onItemClickedListner.onClick(productHistoryModel1);
+            }
+        });
 
     }
 
@@ -53,6 +73,7 @@ public class ProductHistoryAdapter extends RecyclerView.Adapter<ProductHistoryAd
     public class ViewHolderProductHistory extends RecyclerView.ViewHolder {
 
         TextView num,name,start,end;
+        Button view;
         public ViewHolderProductHistory(@NonNull View itemView) {
             super(itemView);
 
@@ -60,6 +81,8 @@ public class ProductHistoryAdapter extends RecyclerView.Adapter<ProductHistoryAd
             name = itemView.findViewById(R.id.name_product_history);
             start = itemView.findViewById(R.id.startDate_product_history);
             end = itemView.findViewById(R.id.endDate_product_history);
+
+            view = itemView.findViewById(R.id.btn_view_product_history);
 
         }
     }

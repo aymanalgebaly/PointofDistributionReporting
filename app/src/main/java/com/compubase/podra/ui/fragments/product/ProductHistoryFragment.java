@@ -3,6 +3,8 @@ package com.compubase.podra.ui.fragments.product;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,10 +12,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.compubase.podra.R;
+import com.compubase.podra.adapter.FirstPersonnelAdapter;
 import com.compubase.podra.adapter.PodHistoryAdapter;
 import com.compubase.podra.adapter.ProductHistoryAdapter;
+import com.compubase.podra.data.model.FristPersonnelModel;
 import com.compubase.podra.data.model.PodHistoryModel;
 import com.compubase.podra.data.model.ProductHistoryModel;
+import com.compubase.podra.ui.activities.HomeActivity;
+import com.compubase.podra.ui.fragments.personnel.InfoPersonnelFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +38,7 @@ public class ProductHistoryFragment extends Fragment {
     RecyclerView RCVHistoryProduct;
     Unbinder unbinder;
     private ProductHistoryAdapter adapter;
+    private ProductHistoryFragment productHistoryFragment;
 
     public ProductHistoryFragment() {
         // Required empty public constructor
@@ -44,13 +51,19 @@ public class ProductHistoryFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_product_history, container, false);
         unbinder = ButterKnife.bind(this, view);
-        setupRecycler();
 
+        return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
 
         setupRecycler();
         fetshData();
-        return view;
+        onTouchAdapter();
     }
+
 
     private void fetshData() {
         List<ProductHistoryModel>productHistoryModels = new ArrayList<>();
@@ -75,6 +88,18 @@ public class ProductHistoryFragment extends Fragment {
         RCVHistoryProduct.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
+    }
+
+    private void onTouchAdapter() {
+        adapter.onItemClickedListner(new ProductHistoryAdapter.onItemClickListner() {
+            @Override
+            public void onClick(ProductHistoryModel productHistoryModel) {
+                HomeActivity homeActivity = (HomeActivity)getActivity();
+                ViewProductFragment viewProductFragment = new ViewProductFragment();
+                homeActivity.displaySelectedFragment(viewProductFragment);
+
+            }
+        });
     }
 
     @Override

@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.compubase.podra.R;
+import com.compubase.podra.ui.activities.HomeActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -60,6 +61,7 @@ public class ViewPodFragment extends Fragment {
     @BindView(R.id.frame_map_pod_view)
     FrameLayout frameMapPodView;
 
+
     Unbinder unbinder;
 
     public ViewPodFragment() {
@@ -72,6 +74,7 @@ public class ViewPodFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_view_pod, container, false);
+
         unbinder = ButterKnife.bind(this, view);
         return view;
     }
