@@ -6,9 +6,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.compubase.podra.R;
+import com.compubase.podra.data.model.FristPersonnelModel;
 import com.compubase.podra.data.model.ViewPersonnelModel;
 
 import java.util.List;
@@ -17,6 +19,16 @@ public class ViewPersonnelAdapter extends RecyclerView.Adapter<ViewPersonnelAdap
 
     private Context context;
     private List<ViewPersonnelModel>viewPersonnelModelList;
+    private ViewPersonnelAdapter.onItemClickListner onItemClickedListner;
+
+
+    public interface onItemClickListner {
+        void onClick(ViewPersonnelModel viewPersonnelModel);//pass your object types.
+    }
+
+    public void onItemClickedListner(ViewPersonnelAdapter.onItemClickListner onItemClickListner) {
+        this.onItemClickedListner = onItemClickListner;
+    }
 
     public ViewPersonnelAdapter(Context context) {
         this.context = context;
@@ -30,7 +42,7 @@ public class ViewPersonnelAdapter extends RecyclerView.Adapter<ViewPersonnelAdap
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolderViewPersonnel viewHolderViewPersonnel, int i) {
+    public void onBindViewHolder(@NonNull ViewHolderViewPersonnel viewHolderViewPersonnel, final int i) {
 
         ViewPersonnelModel viewPersonnelModel = viewPersonnelModelList.get(i);
 
@@ -38,6 +50,14 @@ public class ViewPersonnelAdapter extends RecyclerView.Adapter<ViewPersonnelAdap
         viewHolderViewPersonnel.name.setText(viewPersonnelModel.getName());
         viewHolderViewPersonnel.location.setText(viewPersonnelModel.getLocation());
         viewHolderViewPersonnel.phone.setText(viewPersonnelModel.getPhone());
+
+        viewHolderViewPersonnel.btn_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ViewPersonnelModel viewPersonnelModel1 = viewPersonnelModelList.get(i);
+                onItemClickedListner.onClick(viewPersonnelModel1);
+            }
+        });
     }
 
     @Override
@@ -52,6 +72,7 @@ public class ViewPersonnelAdapter extends RecyclerView.Adapter<ViewPersonnelAdap
     public class ViewHolderViewPersonnel extends RecyclerView.ViewHolder {
 
         TextView num,name,location,phone;
+        Button btn_view;
         public ViewHolderViewPersonnel(@NonNull View itemView) {
             super(itemView);
 
@@ -59,6 +80,8 @@ public class ViewPersonnelAdapter extends RecyclerView.Adapter<ViewPersonnelAdap
             name = itemView.findViewById(R.id.agent_name_view_personnel_design);
             location = itemView.findViewById(R.id.agent_location_view_personnel_design);
             phone = itemView.findViewById(R.id.phone_num_view_personnel_design);
+
+            btn_view = itemView.findViewById(R.id.BTN_View_View_Personnel);
         }
     }
 }

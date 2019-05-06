@@ -17,6 +17,7 @@ import com.compubase.podra.adapter.FirstPersonnelAdapter;
 import com.compubase.podra.adapter.ViewPersonnelAdapter;
 import com.compubase.podra.data.model.FristPersonnelModel;
 import com.compubase.podra.data.model.ViewPersonnelModel;
+import com.compubase.podra.ui.activities.HomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,6 +74,7 @@ public class ViewPersonnelFragment extends Fragment {
 
         setupRecycler();
         fetchData();
+        onTouchAdapter();
 
         unbinder = ButterKnife.bind(this, view);
         return view;
@@ -99,6 +101,18 @@ public class ViewPersonnelFragment extends Fragment {
         }
         adapter.setData(viewPersonnelModels);
         adapter.notifyDataSetChanged();
+    }
+
+    private void onTouchAdapter() {
+        adapter.onItemClickedListner(new ViewPersonnelAdapter.onItemClickListner() {
+            @Override
+            public void onClick(ViewPersonnelModel viewPersonnelModel) {
+                HomeActivity homeActivity = (HomeActivity)getActivity();
+                AgentInformationFragment agentInformationFragment = new AgentInformationFragment();
+                homeActivity.displaySelectedFragment(agentInformationFragment);
+
+            }
+        });
     }
 
     @Override
