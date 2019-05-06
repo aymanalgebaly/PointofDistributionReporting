@@ -21,13 +21,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_margin="5dp"
             android:layout_weight="2">
 
             <TextView
                 android:id="@+id/txt_num_view_personnel_design"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
                 android:text=""
                 android:textStyle="bold"
                 android:textSize="12sp"
@@ -56,6 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
+            android:layout_margin="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -72,6 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
+            android:layout_margin="5dp"
             android:background="@drawable/edite_text_strok"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -104,6 +106,7 @@
             android:layout_height="0dp"
             android:layout_weight="2"
             android:weightSum="2"
+            android:layout_margin="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -114,7 +117,7 @@
                 android:text=""
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="@color/blue"
+                android:textColor="@color/black"
                 android:layout_marginStart="3dp"/>
 
             <TextView
@@ -125,7 +128,7 @@
                 android:text=""
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="@color/blue"
+                android:textColor="@color/black"
                 android:layout_marginStart="3dp"/>
         </LinearLayout>
 

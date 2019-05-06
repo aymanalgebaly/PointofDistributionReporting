@@ -3,6 +3,8 @@ package com.compubase.podra.ui.fragments.POD;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,15 @@ import android.widget.TextView;
 
 import com.compubase.podra.R;
 import com.compubase.podra.ui.activities.HomeActivity;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,7 +34,7 @@ import butterknife.Unbinder;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ViewPodFragment extends Fragment {
+public class ViewPodFragment extends Fragment implements OnMapReadyCallback {
 
 
     @BindView(R.id.RV_ViewPod)
@@ -61,8 +72,11 @@ public class ViewPodFragment extends Fragment {
     @BindView(R.id.frame_map_pod_view)
     FrameLayout frameMapPodView;
 
+    private GoogleMap mMap;
+
 
     Unbinder unbinder;
+    private SupportMapFragment mapFragment;
 
     public ViewPodFragment() {
         // Required empty public constructor
@@ -75,9 +89,39 @@ public class ViewPodFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_view_pod, container, false);
 
+        mapFragment = (SupportMapFragment) getChildFragmentManager()
+                .findFragmentById(R.id.pod_view_map);
+        if (mapFragment == null){
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            mapFragment = SupportMapFragment.newInstance();
+            fragmentTransaction.replace(R.id.pod_view_map,mapFragment).commit();
+        }
+        mapFragment.getMapAsync(this);
+
+
         unbinder = ButterKnife.bind(this, view);
         return view;
     }
+    private void addMarker(LatLng latLng) {
+        try {
+            if (null != latLng) {
+                BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromResource(R.drawable.ic_location_on_black_24dp);
+                MarkerOptions options = new MarkerOptions();
+                options.position(latLng)
+                        .icon(bitmapDescriptor);
+
+                if (mMap != null) {
+                    mMap.addMarker(options);
+                    CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(latLng, 19f);
+                    mMap.animateCamera(cameraUpdate);
+                }
+
+            }
+        } catch (Exception e) {
+        }
+    }
+
 
     @Override
     public void onDestroyView() {
@@ -87,5 +131,10 @@ public class ViewPodFragment extends Fragment {
 
     @OnClick(R.id.BTN_Last_visits_pod_view)
     public void onViewClicked() {
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
     }
 }

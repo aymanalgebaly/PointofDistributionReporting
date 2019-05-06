@@ -10,8 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.compubase.podra.R;
+import com.compubase.podra.adapter.DeliveryHistoryAdapter;
 import com.compubase.podra.adapter.FirstPersonnelAdapter;
+import com.compubase.podra.data.model.DeliveryHistoryModel;
 import com.compubase.podra.data.model.FristPersonnelModel;
+import com.compubase.podra.ui.activities.HomeActivity;
+import com.compubase.podra.ui.fragments.delivery.ViewDeliveryFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +51,7 @@ public class ActivePersonnelFragment extends Fragment {
 
         setupRecycler();
         fetchData();
+        onTouchAdapter();
 
         unbinder = ButterKnife.bind(this, view);
         return view;
@@ -72,6 +77,17 @@ public class ActivePersonnelFragment extends Fragment {
         }
         adapter.setData(fristPersonnelModels);
         adapter.notifyDataSetChanged();
+    }
+    private void onTouchAdapter() {
+        adapter.onItemClickedListner(new FirstPersonnelAdapter.onItemClickListner() {
+            @Override
+            public void onClick(FristPersonnelModel fristPersonnelModel) {
+                HomeActivity homeActivity = (HomeActivity)getActivity();
+                ViewPersonnelFragment viewPersonnelFragment = new ViewPersonnelFragment();
+                homeActivity.displaySelectedFragment(viewPersonnelFragment);
+
+            }
+        });
     }
 
     @Override
